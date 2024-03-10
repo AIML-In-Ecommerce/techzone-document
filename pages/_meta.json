@@ -1,5 +1,6 @@
 {
-  "index": "Introduction",
+  "introduction": "Introduction",
+  "architecture": "System Architecture",
   "another": "Another Page",
   "advanced": "Advanced (A Folder)",
   "about": {
