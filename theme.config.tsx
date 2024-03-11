@@ -8,10 +8,12 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/AIML-In-Ecommerce",
   },
+
   docsRepositoryBase:
     "https://github.com/AIML-In-Ecommerce/techzone-document.git",
   footer: {
     text: "TextZone",
+    // component: <div></div>,
   },
   useNextSeoProps() {
     const { asPath } = useRouter();
