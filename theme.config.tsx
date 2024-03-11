@@ -1,14 +1,25 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import { useRouter } from "next/router";
+import { useConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>TechZone</span>,
+  logo: <span style={{ fontWeight: 700, fontSize: 30 }}>TechZone</span>,
   project: {
-    link: "https://github.com/shuding/nextra-docs-template",
+    link: "https://github.com/AIML-In-Ecommerce",
   },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  docsRepositoryBase:
+    "https://github.com/AIML-In-Ecommerce/techzone-document.git",
   footer: {
-    text: "Nextra Docs Template",
+    text: "TextZone",
+  },
+  useNextSeoProps() {
+    const { asPath } = useRouter();
+    if (asPath !== "/") {
+      return {
+        titleTemplate: "%s – TechZone",
+      };
+    }
   },
 };
 
